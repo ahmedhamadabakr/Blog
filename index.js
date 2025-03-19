@@ -36,18 +36,6 @@ app.get("/send-mail", (req, res) => {
 });
 
 
-
-
-/* app.get("/api/posts/:postId/archive", (req, res) => {
-  const postId = req.params.postId;
-
-  const oldPath = `data/posts/${postId}.json`;
-  const newPath = `data/archive/${postId}.json`;
-  fs.renameSync(oldPath, newPath);
-
-  res.send("Post archived");
-}); */
-
 app.all("*", (req, res) => {
   res.send("404 Page Not Found");
 });
