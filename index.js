@@ -32,8 +32,11 @@ app.get("/send-mail", (req, res) => {
     html: "<h1>Your OTP IS</h1>",
   });
 
-  res.send("send meail");
+  res.send("send email success");
 });
+
+
+
 
 /* app.get("/api/posts/:postId/archive", (req, res) => {
   const postId = req.params.postId;
