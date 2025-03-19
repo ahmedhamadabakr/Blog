@@ -5,5 +5,4 @@ const postSchema = zod.object({
   body: zod.string().min(30).max(1000),
 });
 
-
-module.exports=postSchema
+module.exports = postSchema;
