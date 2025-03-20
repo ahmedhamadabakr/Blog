@@ -1,10 +1,12 @@
 const db = require("../db");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const signupSchema = require("../schema/signup.schema");
 const loginSchema = require("../schema/login.schema");
 
 const signup = async (req, res) => {
   try {
+    signupSchema.parse(req.body);
     // Validate request body
     if (!req.body.email || !req.body.password || !req.body.name) {
       res.status(400).send("Email, password, and name are required");
